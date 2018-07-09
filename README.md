@@ -17,8 +17,8 @@ Next, reboot Windows, then install Ubuntu (or any of the Linux distros) from the
 
 Next, launch Ubuntu to install the redis-server. Here is the example for Ubuntu: (note: you may need to create a new Login and Password)
 ```
-> sudo apt-get install redis-server
 > sudo apt-get update
+> sudo apt-get install redis-server
 ```
 Next, edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
 
