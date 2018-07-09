@@ -30,3 +30,10 @@ Execute a simple Redis commend to verify your Redis-Server instance is running a
 127.0.0.1:6379> get user1
 "Salvatore"
 ```
+So how is Ubuntu able to run on Windows?  Instead of calling the Linux Kernel, the system calls (syscalls) that these un-modified Linux libraries use are re-directed over to Windows. 
+
+If you want to edit Windows files in Windows and in Linux,  keep your files/code in /mnt/c/ and you can edit them with either OS. But don't use Windows to "reach into the Linux file system." That can lead you down a path you will likely regret. 
+
+WSLCONFIG
+
+WSL means "Windows Subsystem for Linux." Starting with the Windows 10 (version 1709 - that's 2017-09, the Fall Creators Update. Run "Winver" to see what version of Windows you're running), you've got a command called "wslconfig." Try it out. It lists distros you have and controls which one starts when you type "bash."
