@@ -1,10 +1,10 @@
-# redis_on_windows
+# Running Redis on Linux on Windows 10 
 
-Running Redis on Linux on Windows 10
+Windows Subsystem for Linux (WSL)
 
 Yes, you heard right. You can run at least a half-dozen flavors of Linux on Windows 10, and you can run Redis on top of any of them. No VM required. No Docker either.  Sure, you can download the Redis-CLI and connect to Redis Cloud running Redis-as-a-Service on AWS, Azure, GCP, IBM Cloud, Pivotal Web Services or Heroku. I often encourage this for trying sample code. But now, for developers who use Windows 10, I mostly recommend running Redis on Linux on Windows 10. 
 
-To get set up on Windows 10, open PowerShell as Administrator and run this command to enable the Windows Subsystem for Linux (WSL): 
+To get set up on Windows 10, follow the instructions on the Microsoft Docs webstie (https://docs.microsoft.com/en-us/windows/wsl/install-win10). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
