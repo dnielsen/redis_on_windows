@@ -15,9 +15,10 @@ Next, reboot Windows, then install Ubuntu (or any of the Linux distros) from the
 - Kali Linux - https://www.microsoft.com/en-us/p/kali-linux/9pkr34tncv07
 - Debian GNU/Linux - https://www.microsoft.com/en-us/p/debian-gnu-linux/9msvkqc78pk6
 
-Next, use cmd.exe to install the redis-server:
+Next, launch Ubuntu to install the redis-server. Here is the example for Ubuntu: (note: you may need to create a new Login and Password)
 ```
 > sudo apt-get install redis-server
+> sudo apt-get update
 ```
 Next, edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
 
@@ -37,3 +38,5 @@ If you want to edit Windows files in Windows and in Linux,  keep your files/code
 WSLCONFIG
 
 WSL means "Windows Subsystem for Linux." Starting with the Windows 10 (version 1709 - that's 2017-09, the Fall Creators Update. Run "Winver" to see what version of Windows you're running), you've got a command called "wslconfig." Try it out. It lists distros you have and controls which one starts when you type "bash."
+
+
