@@ -9,7 +9,7 @@ To get set up on Windows 10, open PowerShell as Administrator and run this comma
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 Next, reboot Windows, then install Ubuntu (or any of the Linux distros) from the Windows Store at http://microsoft.com/store. Ubuntu is a 1.8GB download.
-- Ubuntu (1.8GB download) - https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?rtc=1
+- Ubuntu - https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6 (~200 mb)
 - OpenSUSE - https://www.microsoft.com/store/apps/9njvjts82tjx
 - SLES - https://www.microsoft.com/store/apps/9p32mwbh6cns
 - Kali Linux - https://www.microsoft.com/en-us/p/kali-linux/9pkr34tncv07
