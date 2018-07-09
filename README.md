@@ -23,7 +23,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ```
 4. Edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
 ```
-sudo nano /etc/redis/redis.conf
+> sudo nano /etc/redis/redis.conf
 ```
 5. Restart the Redis service:
 ```
