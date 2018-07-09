@@ -22,7 +22,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 > sudo apt-get install redis-server
 ```
 4. Edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
-
+```
+sudo nano /etc/redis/redis.conf
+```
 5. Restart the Redis service:
 ```
 > sudo service redis-server restart
