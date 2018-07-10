@@ -10,8 +10,7 @@ Run "Winver" to see what version of Windows you're running. Starting with versio
 
 ## Here's how to set it up!
 
-1. Enable Windows Subsystem for Linux
-Follow the instructions on [Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux "Install the Windows Subsystem for LInux"). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
+1. To enable Windows Subsystem for Linux, follow the instructions on [Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux "Install the Windows Subsystem for LInux"). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
