@@ -1,10 +1,14 @@
 # Running Redis on Linux on Windows 10 
 
-Windows Subsystem for Linux
+## Windows Subsystem for Linux
 
 Yes, you heard right. Starting with the Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of anyone of those flavors. No VM required. No Docker either.  Sure, you can download the Redis-CLI and connect to Redis Enterprise Cloud running Redis-as-a-Service on AWS, Azure, GCP, IBM Cloud, Pivotal Web Services or Heroku. I often encourage this for trying sample code. But since Jessican Dean explained how it works at [SVDevOps Meetup](https://www.meetup.com/SVDevOps/events/235908130/ "Getting started with BASH on Windows 10"), I recommend Windows 10 users run Redis on their own machines.
 
-# Here's how to set it up!
+## How do I know if I have Windows 10
+
+Run "Winver" to see what version of Windows you're running. Startign with version 10, you've got a command called "wslconfig." It lists distros you have and controls which one starts when you type "bash." Try it out!
+
+## Here's how to set it up!
 
 1. Enable Windows Subsystem for Linux
 Follow the instructions on the Microsoft Docs webstie (https://docs.microsoft.com/en-us/windows/wsl/install-win10). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
@@ -39,14 +43,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 127.0.0.1:6379> get user1
 "Salvatore"
 ```
-# So how is Ubuntu able to run on Windows?  
+## So how is Ubuntu able to run on Windows?  
 
 Instead of calling the Linux Kernel, the system calls (syscalls) that these un-modified Linux libraries use are re-directed over to Windows. 
 
 If you want to edit Windows files in Windows and in Linux,  keep your files in /mnt/c/ so you can edit them with either OS. Don't use Windows to "reach into the Linux file system." As Scott Hanselman says on his [WSL blog post](https://www.hanselman.com/blog/VIDEOHowToRunLinuxAndBashOnWindows10AnniversaryUpdate.aspx "The year of Linux on the (Windows) Desktop - WSL Tips and Tricks"), "There be dragons!"
 
-WSLCONFIG
-
-Run "Winver" to see what version of Windows you're running), you've got a command called "wslconfig." Try it out. It lists distros you have and controls which one starts when you type "bash."
 
 
