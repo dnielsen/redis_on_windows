@@ -1,4 +1,4 @@
-# Running Redis on Linux on Windows 10 
+# Running Redis on Linux in Windows 10 
 
 ## Windows Subsystem for Linux
 
