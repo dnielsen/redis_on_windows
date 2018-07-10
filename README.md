@@ -2,7 +2,7 @@
 
 ## Windows Subsystem for Linux
 
-Yes, you heard right. Starting with the Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of anyone of those flavors. No VM required. No Docker either.  Sure, you can download the Redis-CLI and connect to Redis Enterprise Cloud running Redis-as-a-Service on AWS, Azure, GCP, IBM Cloud, Pivotal Web Services or Heroku. I often encourage this for trying sample code. But since Jessican Dean explained how it works at [SVDevOps Meetup](https://www.meetup.com/SVDevOps/events/235908130/ "Getting started with BASH on Windows 10"), I recommend Windows 10 users run Redis on their own machines.
+Yes, you heard right. Starting with the Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of that. No VM required. No Docker either.  Sure, you can download the Redis-CLI and connect to Redis Enterprise Cloud running Redis-as-a-Service on AWS, Azure, GCP, IBM Cloud, Pivotal Web Services or Heroku. I often encourage this for trying sample code. But since [Jessica Dean](https://twitter.com/jldeen "Jessica Dean on Twitter") explained how it works at [SVDevOps Meetup](https://www.meetup.com/SVDevOps/events/235908130/ "Getting started with BASH on Windows 10"), I recommend Windows 10 users run Redis on their own machines.
 
 ## How do I know if I have Windows 10
 
@@ -11,16 +11,16 @@ Run "Winver" to see what version of Windows you're running. Startign with versio
 ## Here's how to set it up!
 
 1. Enable Windows Subsystem for Linux
-Follow the instructions on the Microsoft Docs webstie (https://docs.microsoft.com/en-us/windows/wsl/install-win10). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
+Follow the instructions on [Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux "Install the Windows Subsystem for LInux"). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 2. Reboot Windows, then install any of the Linux distros from the Windows Store at http://microsoft.com/store. For the purpose of these instructions, we will install Ubuntu:
-- Ubuntu - https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6 (~200 mb)
-- OpenSUSE - https://www.microsoft.com/store/apps/9njvjts82tjx
-- SLES - https://www.microsoft.com/store/apps/9p32mwbh6cns
-- Kali Linux - https://www.microsoft.com/en-us/p/kali-linux/9pkr34tncv07
-- Debian GNU/Linux - https://www.microsoft.com/en-us/p/debian-gnu-linux/9msvkqc78pk6
+- [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) (~200 mb)
+- [OpenSUSE](https://www.microsoft.com/store/apps/9njvjts82tjx)
+- [SLES](https://www.microsoft.com/store/apps/9p32mwbh6cns)
+- [Kali Linux](https://www.microsoft.com/en-us/p/kali-linux/9pkr34tncv07)
+- [Debian GNU/Linux](https://www.microsoft.com/en-us/p/debian-gnu-linux/9msvkqc78pk6)
 
 3. Launch Ubuntu to install the redis-server. Here is the example for Ubuntu: (note: you may need to create a new Login and Password)
 ```
