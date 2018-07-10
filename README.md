@@ -6,7 +6,7 @@ Yes, you heard right. Starting with the Windows 10 (v1709 - 2017-09, Fall Creato
 
 ## How do I know if I have Windows 10
 
-Run "Winver" to see what version of Windows you're running. Startign with version 10, you've got a command called "wslconfig." It lists distros you have and controls which one starts when you type "bash." Try it out!
+Run "Winver" to see what version of Windows you're running. Starting with version 10, you've got a command called "wslconfig." It lists distros you have and controls which one starts when you type "bash." Try it out!
 
 ## Here's how to set it up!
 
