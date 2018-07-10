@@ -2,7 +2,7 @@
 
 Windows Subsystem for Linux
 
-Yes, you heard right. Starting with the Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of anyone of those flavors. No VM required. No Docker either.  Sure, you can download the Redis-CLI and connect to Redis Enterprise Cloud running Redis-as-a-Service on AWS, Azure, GCP, IBM Cloud, Pivotal Web Services or Heroku. I often encourage this for trying sample code. But now, for developers who use Windows 10, I  recommend running Redis on Linux on Windows. 
+Yes, you heard right. Starting with the Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of anyone of those flavors. No VM required. No Docker either.  Sure, you can download the Redis-CLI and connect to Redis Enterprise Cloud running Redis-as-a-Service on AWS, Azure, GCP, IBM Cloud, Pivotal Web Services or Heroku. I often encourage this for trying sample code. But since Jessican Dean explained how it works at [SVDevOps Meetup](https://www.meetup.com/SVDevOps/events/235908130/ "Getting started with BASH on Windows 10"), I recommend Windows 10 users run Redis on their own machines.
 
 # Here's how to set it up!
 
@@ -43,7 +43,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 Instead of calling the Linux Kernel, the system calls (syscalls) that these un-modified Linux libraries use are re-directed over to Windows. 
 
-If you want to edit Windows files in Windows and in Linux,  keep your files in /mnt/c/ so you can edit them with either OS. Don't use Windows to "reach into the Linux file system." That can lead you down a path you will likely regret. 
+If you want to edit Windows files in Windows and in Linux,  keep your files in /mnt/c/ so you can edit them with either OS. Don't use Windows to "reach into the Linux file system." As Scott Hanselman says on his [WSL blog post](https://www.hanselman.com/blog/VIDEOHowToRunLinuxAndBashOnWindows10AnniversaryUpdate.aspx "The year of Linux on the (Windows) Desktop - WSL Tips and Tricks"), "There be dragons!"
 
 WSLCONFIG
 
