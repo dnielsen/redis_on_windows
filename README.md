@@ -21,7 +21,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - [Kali Linux](https://www.microsoft.com/en-us/p/kali-linux/9pkr34tncv07)
 - [Debian GNU/Linux](https://www.microsoft.com/en-us/p/debian-gnu-linux/9msvkqc78pk6)
 
-3. Launch Ubuntu to install the redis-server. Here is the example for Ubuntu: (note: you may need to create a new Login and Password)
+3. Launch Ubuntu from the Windows Store and then install redis-server. Here is the example for Ubuntu: (note: you may need to create a new Login and Password)
 ```
 > sudo apt-get update
 > sudo apt-get install redis-server
