@@ -2,7 +2,7 @@
 
 ## Windows Subsystem for Linux
 
-Yes, you heard right. Starting with Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of that. No VM required. No Docker either.  Sure, you can download the Redis-CLI and connect to [Redis Enterprise Cloud](https://redislabs.com/redis-enterprise/cloud/ "Redis database-as-a-service") running Redis-as-a-Service on [AWS, Azure, GCP, Pivotal Web Services or Heroku](https://redislabs.com/redis-enterprise/cloud/access/ "Redis Enterprise Cloud"). I often encourage this for trying sample code. But ever since [Jessica Dean](https://twitter.com/jldeen "Jessica Dean on Twitter") explained how it works at the [SVDevOps Meetup](https://www.meetup.com/SVDevOps/events/235908130/ "Getting started with BASH on Windows 10"), I recommend Windows 10 users run Redis on their own machines.
+Yes, you heard right. Starting with Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of that. No VM required. No Docker either.  Sure, you can [download the Redis-CLI](https://github.com/dmajkic/redis/downloads "redis-2.4.5-win32-win64.zip") and connect to [Redis Enterprise Cloud](https://redislabs.com/redis-enterprise/cloud/ "Redis database-as-a-service") running Redis-as-a-Service on [AWS, Azure, GCP, Pivotal Web Services or Heroku](https://redislabs.com/redis-enterprise/cloud/access/ "Redis Enterprise Cloud"). I've recommended this in the past for trying simple Redis commands from a Windows machine. But ever since [Jessica Dean](https://twitter.com/jldeen "Jessica Dean on Twitter") explained how it works in her talk at the [SVDevOps Meetup](https://www.meetup.com/SVDevOps/events/235908130/ "Getting started with BASH on Windows 10"), I recommend Windows 10 users run Redis on their own machines.
 
 ## How do I know if I have Windows 10
 
@@ -14,29 +14,29 @@ Run "Winver" to see what version of Windows you're running. Starting with versio
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
-2. Reboot Windows, then install any of the Linux distros from the [Windows Store](http://microsoft.com/store). For the purpose of these instructions, we will install Ubuntu:
+Reboot Windows after making the change. Note you only need to do this one time. 
+
+2. Download and install one of the supported Linux distros from the [Windows Store](http://microsoft.com/store "Windows Store"). 
 - [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) (~200 mb)
-- [OpenSUSE](https://www.microsoft.com/store/apps/9njvjts82tjx)
-- [SLES](https://www.microsoft.com/store/apps/9p32mwbh6cns)
 - [Kali Linux](https://www.microsoft.com/en-us/p/kali-linux/9pkr34tncv07)
 - [Debian GNU/Linux](https://www.microsoft.com/en-us/p/debian-gnu-linux/9msvkqc78pk6)
+For the purpose of instructions, we installed Ubuntu.
 
-3. Launch Ubuntu from the Windows Store and then install redis-server. Here is the example for Ubuntu: (note: you may need to create a new Login and Password)
+3. Launch installed Distro from the Windows Store and then install redis-server. (note: you need to wait for initialization and create login at first time)
 ```
 > sudo apt-get update 
 > sudo apt-get upgrade
 > sudo apt-get install redis-server
 ```
-4. Edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
+4. Optional: edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
 ```
 > sudo nano /etc/redis/redis.conf
 > // change the line, then save and close the file
 ```
-5. Restart the Redis service:
+5. Run command to restart service to make sure Redis is running:
 ```
 > sudo service redis-server restart
 ```
-
 6. Execute a simple Redis commend to verify your Redis-Server instance is running and available: 
 ```
 > redis-cli 
@@ -44,6 +44,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 127.0.0.1:6379> get user1
 "Salvatore"
 ```
+8. To stop Redis you need to back to running Distro and stop the service:
+	> sudo service redis-server stop
+  
 ## So how does Ubuntu run within Windows?  
 
 Instead of calling the Linux Kernel, the system calls (syscalls) that these un-modified Linux libraries use are re-directed over to Windows, which performs the work, instead of Linux. 
