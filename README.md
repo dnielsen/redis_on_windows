@@ -14,7 +14,7 @@ Run "Winver" to see what version of Windows you're running. Starting with versio
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
-Reboot Windows after making the change. Note you only need to do this one time. 
+   Reboot Windows after making the change. Note you only need to do this one time. 
 
 2. Download and install one of the supported Linux distros from the [Windows Store](http://microsoft.com/store "Windows Store").
 - [Ubuntu 16.4](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) 
