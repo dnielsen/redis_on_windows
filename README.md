@@ -47,7 +47,7 @@ For the purpose of instructions, we installed Ubuntu.
 8. To stop Redis you need to back to running Distro and stop the service:
 	> sudo service redis-server stop
   
-## So how does Ubuntu run within Windows?  
+## Bonus: How does Ubuntu run within Windows?  
 
 Instead of calling the Linux Kernel, the system calls (syscalls) that these un-modified Linux libraries use are re-directed over to Windows, which performs the work, instead of Linux. 
 
