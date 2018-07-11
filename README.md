@@ -10,34 +10,34 @@ Run "Winver" to see what version of Windows you're running. Starting with versio
 
 ## Here's how to set it up!
 
-1a. To enable Windows Subsystem for Linux, follow the instructions on [Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux "Install the Windows Subsystem for LInux"). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
+1. To enable Windows Subsystem for Linux, follow the instructions on [Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux "Install the Windows Subsystem for LInux"). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
-1b. Reboot Windows after making the change. Note you only need to do this one time. 
+2. Reboot Windows after making the change. Note you only need to do this one time. 
 
-2. Download and install one of the supported Linux distros from the [Windows Store](http://microsoft.com/store "Windows Store").
+3. Download and install one of the supported Linux distros from the [Windows Store](http://microsoft.com/store "Windows Store").
 - [Ubuntu 16.4](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) 
 - [Ubuntu 18.4](https://www.microsoft.com/en-us/p/ubuntu-1804/9n9tngvndl3q)
 - [Kali Linux](https://www.microsoft.com/en-us/p/kali-linux/9pkr34tncv07)
 - [Debian GNU/Linux](https://www.microsoft.com/en-us/p/debian-gnu-linux/9msvkqc78pk6)
 
-3. Launch installed Distro from the Windows Store and then install redis-server. For the purpose of demonstration, we are providing examples for Ubuntu, Debian, etc. (Note: You need to wait for initialization and create login at first time)
+4. Launch installed Distro from the Windows Store and then install redis-server. For the purpose of demonstration, we are providing examples for Ubuntu, Debian, etc. (Note: You need to wait for initialization and create login at first time)
 ```
 > sudo apt-get update 
 > sudo apt-get upgrade
 > sudo apt-get install redis-server
 ```
-4. Optional: edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
+5. Optional: edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
 ```
 > sudo nano /etc/redis/redis.conf
 > // change the line, then save and close the file
 ```
-5. Run command to restart service to make sure Redis is running:
+6. Run command to restart service to make sure Redis is running:
 ```
 > sudo service redis-server restart
 ```
-6. Execute a simple Redis commend to verify your Redis-Server instance is running and available: 
+7. Execute a simple Redis commend to verify your Redis-Server instance is running and available: 
 ```
 > redis-cli 
 127.0.0.1:6379> set user1 "Salvatore"
