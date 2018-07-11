@@ -16,14 +16,13 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ```
 Reboot Windows after making the change. Note you only need to do this one time. 
 
-2. Download and install one of the supported Linux distros from the [Windows Store](http://microsoft.com/store "Windows Store"). 
+2. Download and install one of the supported Linux distros from the [Windows Store](http://microsoft.com/store "Windows Store").
 - [Ubuntu 16.4](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) 
 - [Ubuntu 18.4](https://www.microsoft.com/en-us/p/ubuntu-1804/9n9tngvndl3q)
 - [Kali Linux](https://www.microsoft.com/en-us/p/kali-linux/9pkr34tncv07)
 - [Debian GNU/Linux](https://www.microsoft.com/en-us/p/debian-gnu-linux/9msvkqc78pk6)
-For the purpose of instructions, we installed Ubuntu.
 
-3. Launch installed Distro from the Windows Store and then install redis-server. (note: you need to wait for initialization and create login at first time)
+3. Launch installed Distro from the Windows Store and then install redis-server. For the purpose of demonstration, we are providing examples for Ubuntu, Debian, etc. (Note: You need to wait for initialization and create login at first time)
 ```
 > sudo apt-get update 
 > sudo apt-get upgrade
