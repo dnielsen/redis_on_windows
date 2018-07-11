@@ -33,18 +33,18 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 > sudo nano /etc/redis/redis.conf
 > // change the line, then save and close the file
 ```
-6. Run command to restart service to make sure Redis is running:
+6. Restart the Redis server to make sure it is running:
 ```
 > sudo service redis-server restart
 ```
-7. Execute a simple Redis commend to verify your Redis-Server instance is running and available: 
+7. Execute a simple Redis commend to verify your Redis server is running and available: 
 ```
 > redis-cli 
 127.0.0.1:6379> set user1 "Salvatore"
 127.0.0.1:6379> get user1
 "Salvatore"
 ```
-8. To stop Redis you need to back to running Distro and stop the service:
+8. To stop your Redis server: 
 ```
 > sudo service redis-server stop
 ```
