@@ -46,7 +46,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ```
 8. To stop Redis you need to back to running Distro and stop the service:
 ```
-sudo service redis-server stop
+> sudo service redis-server stop
 ```
   
 ## Bonus: How does Ubuntu run within Windows?  
