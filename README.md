@@ -2,13 +2,13 @@
 
 ## Windows Subsystem for Linux
 
-Yes, you heard right. Starting with Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of that. No VM required. No Docker either.  Sure, you can [download the Redis-CLI](https://github.com/dmajkic/redis/downloads "redis-2.4.5-win32-win64.zip") and connect to [Redis Enterprise Cloud](https://redislabs.com/redis-enterprise/cloud/ "Redis database-as-a-service") running Redis-as-a-Service on [AWS, Azure, GCP, Pivotal Web Services or Heroku](https://redislabs.com/redis-enterprise/cloud/access/ "Redis Enterprise Cloud"). But ever since [Jessica Dean](https://twitter.com/jldeen "Jessica Dean on Twitter") explained how Bash on Windows works at the [SVDevOps Meetup](https://www.meetup.com/SVDevOps/events/235908130/ "Getting started with BASH on Windows 10"), I recommend Windows 10 users run Redis on their own dev machines.
+Yes, you heard right. Starting with Windows 10 (v1709 - 2017-09, Fall Creators Update), you can run at least a half-dozen flavors of Linux on the Windows Subsystem for Linux (WSL), and you can run Redis on top of that. No VM required. No Docker either.  Sure, you can [download the Redis-CLI](https://github.com/dmajkic/redis/downloads "redis-2.4.5-win32-win64.zip") and connect to [Redis Enterprise Cloud](https://redislabs.com/redis-enterprise/cloud/ "Redis database-as-a-service") running Redis-as-a-Service on [AWS, Azure, GCP, Pivotal Web Services or Heroku](https://redislabs.com/redis-enterprise/cloud/access/ "Redis Enterprise Cloud"). But ever since [Jessica Dean](https://twitter.com/jldeen "Jessica Dean on Twitter") explained how WSL works at the [SVDevOps Meetup](https://www.meetup.com/SVDevOps/events/235908130/ "Getting started with BASH on Windows 10"), I recommend Windows 10 users run Redis on their own dev machines.
 
-## How do I know if I have Windows 10
+## How do I know if I have Windows 10 or WSL?
 
 Run "Winver" to see what version of Windows you're running. Starting with version 10, you've got a command called "wslconfig." It lists distros you have and controls which one starts when you type "bash." Try it out!
 
-## Here's how to set it up!
+## How to set it up!
 
 1. To enable Windows Subsystem for Linux, follow the instructions on [Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux "Install the Windows Subsystem for LInux"). The short version is: Open PowerShell as Administrator and run this command to enable Windows Subsystem for Linux (WSL): 
 ```
