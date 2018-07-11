@@ -23,7 +23,8 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 3. Launch Ubuntu from the Windows Store and then install redis-server. Here is the example for Ubuntu: (note: you may need to create a new Login and Password)
 ```
-> sudo apt-get update
+> sudo apt-get update 
+> sudo apt-get upgrade
 > sudo apt-get install redis-server
 ```
 4. Edit /etc/redis/redis.conf and change the line “bind 127.0.0.1” to “bind 0.0.0.0”
